@@ -2,7 +2,7 @@
   "name": "watched-path-autoexec",
   "displayName": "Watched Path AutoExec",
   "description": "Executes any command on watched files events",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "Hexix",
   "engines": {
     "vscode": "^1.15.0"
