@@ -1,0 +1,53 @@
+{
+  "name": "watched-path-autoexec",
+  "displayName": "Watched Path AutoExec",
+  "description": "Executes any command on watched files events",
+  "version": "0.0.1",
+  "publisher": "Hexix",
+  "engines": {
+    "vscode": "^1.15.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["*"],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Watched Path AutoExec configuration",
+      "properties": {
+        "watched-path-autoexec.executable.path": {
+          "type": "string",
+          "default": "",
+          "description": "Full path to the executable"
+        },
+        "watched-path-autoexec.executable.args": {
+          "type": "array",
+          "default": null,
+          "description": "AutoExec arguments"
+        },
+        "watched-path-autoexec.watched": {
+          "type": "array",
+          "default": null,
+          "description": "Path patterns to watch"
+        },
+        "watched-path-autoexec.debug": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show debug output"
+        }
+      }
+    }
+  },
+  "main": "./extension",
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "eslint": "^3.6.0",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  }
+}
